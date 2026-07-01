@@ -117,7 +117,7 @@ Manufacturing_Production_Tracker_Form
 ├─ ManufacturingTracker
     │
     ├── Database
-        ├── DatabaseSetup.sql
+        └── DatabaseSetup.sql
     ├── DatabaseHelper.cs
     ├── Form1.cs
     ├── Form1.Designer.cs
