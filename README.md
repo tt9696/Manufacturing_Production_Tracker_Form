@@ -113,14 +113,17 @@ All KPI cards and charts are refreshed automatically after adding, updating, or 
 ## 📁 Project Structure
 
 ```text
-ManufacturingTracker
-│
-├── DatabaseHelper.cs
-├── Form1.cs
-├── Form1.Designer.cs
-├── Program.cs
+Manufacturing_Production_Tracker_Form
+├─ ManufacturingTracker
+    │
+    ├── Database
+        ├── DatabaseSetup.sql
+    ├── DatabaseHelper.cs
+    ├── Form1.cs
+    ├── Form1.Designer.cs
+    ├── Program.cs
 ├── Dashboard.png
-│  
+├── README.md
 └── ManufacturingTracker.sln
 ```
 
