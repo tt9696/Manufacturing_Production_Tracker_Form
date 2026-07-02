@@ -11,30 +11,8 @@ A desktop application developed using **C# WinForms** and **SQL Server** to help
 ---
 
 ## 📌 Overview
----
-## 🖥️ Application Screenshots
 
-### Dashboard
-
-![Dashboard](Dashboard.png)
-
----
-
-## Configure SQL Server
-
-Before running the application, update the connection string in `App.config`:
-
-```xml
-Server=YOUR_SERVER_NAME;
-Database=ManufacturingDB;
-Trusted_Connection=True;
-TrustServerCertificate=True;
-```
-
-Replace `YOUR_SERVER_NAME` with your SQL Server instance name (for example, `DESKTOP-ABC123`, `.\SQLEXPRESS`, or `(localdb)\MSSQLLocalDB`).
----
-
-## ✨ Features
+### ✨ Features
 
 * ✅ Add new production records
 * ✅ Update existing records
@@ -52,7 +30,7 @@ Replace `YOUR_SERVER_NAME` with your SQL Server instance name (for example, `DES
 
 ---
 
-## 🛠️ Technologies Used
+### 🛠️ Technologies Used
 
 * C#
 * .NET 8 WinForms
@@ -63,7 +41,7 @@ Replace `YOUR_SERVER_NAME` with your SQL Server instance name (for example, `DES
 * Visual Studio 2022
 ---
 
-## 📊 Dashboard
+### 📊 Dashboard
 
 The dashboard displays real-time manufacturing information including:
 
@@ -76,9 +54,27 @@ The dashboard displays real-time manufacturing information including:
 All KPI cards and charts are refreshed automatically after adding, updating, or deleting records.
 
 ---
+## 🖥️ Application Screenshots
+
+![Dashboard](Dashboard.png)
+
+---
 
 ## 🚀 How to Run
+### Configure SQL Server
 
+Before running the application, update the connection string in `App.config`:
+
+```xml
+Server=YOUR_SERVER_NAME;
+Database=ManufacturingDB;
+Trusted_Connection=True;
+TrustServerCertificate=True;
+```
+
+Replace `YOUR_SERVER_NAME` with your SQL Server instance name (for example, `DESKTOP-ABC123`, `.\SQLEXPRESS`, or `(localdb)\MSSQLLocalDB`).
+---
+### Steps:
 1. Clone this repository.
 2. Open the solution in Visual Studio 2022.
 3. Restore NuGet packages.
