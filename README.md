@@ -1,23 +1,25 @@
 # 🏭 Manufacturing Production Tracker
 
+![.NET](https://img.shields.io/badge/.NET-8-blue)
+![C#](https://img.shields.io/badge/C%23-WinForms-purple)
+![SQL Server](https://img.shields.io/badge/SQL%20Server-Database-red)
+![License](https://img.shields.io/badge/License-MIT-green)
+
+
 A desktop application developed using **C# WinForms** and **SQL Server** to help track manufacturing production records. The system provides CRUD operations, real-time KPI dashboards, production analytics, instant search, and Excel export functionality.
 
 ---
 
-
-
 ## 📌 Overview
+---
+## 🖥️ Application Screenshots
 
-This project was developed as a self-learning project to strengthen my skills in:
+### Dashboard
 
-* C# WinForms application development
-* SQL Server database integration
-* ADO.NET
-* Data visualization using LiveCharts2
-* Responsive desktop UI design
-* Excel report generation using EPPlus
+![Dashboard](Dashboard.png)
 
 ---
+
 ## Configure SQL Server
 
 Before running the application, update the connection string in `App.config`:
@@ -47,30 +49,6 @@ Replace `YOUR_SERVER_NAME` with your SQL Server instance name (for example, `DES
 * ✅ Production vs Defects chart
 * ✅ Export production data to Excel
 * ✅ Responsive layout using TableLayoutPanel
-
----
-
-## 🖥️ Application Screenshots
-
-### Dashboard
-
-![Dashboard](Dashboard.png)
-
----
-
-## 🗄️ Database Structure
-
-### Production Table
-
-| Column          | Data Type |
-| --------------- | --------- |
-| Id              | int       |
-| ProductName     | nvarchar  |
-| Quantity        | int       |
-| Defect          | int       |
-| DowntimeMinutes | int       |
-| CreatedAt       | datetime  |
-| UpdatedAt       | datetime  |
 
 ---
 
@@ -104,8 +82,8 @@ All KPI cards and charts are refreshed automatically after adding, updating, or 
 1. Clone this repository.
 2. Open the solution in Visual Studio 2022.
 3. Restore NuGet packages.
-4. Update the SQL Server connection string in `DatabaseHelper.cs`.
-5. Create the `Production` table in SQL Server.
+4. Update the SQL Server connection string in App.config.
+5. Execute Database/DatabaseSetup.sql in SQL Server Management Studio.
 6. Run the application.
 
 ---
@@ -114,19 +92,50 @@ All KPI cards and charts are refreshed automatically after adding, updating, or 
 
 ```text
 Manufacturing_Production_Tracker_Form
-├─ ManufacturingTracker
-    │
-    ├── Database
-        └── DatabaseSetup.sql
-    ├── DatabaseHelper.cs
-    ├── Form1.cs
-    ├── Form1.Designer.cs
-    ├── Program.cs
+│
+├── ManufacturingTracker/
+│   ├── Database/
+│   │   └── DatabaseSetup.sql
+│   ├── App.config
+│   ├── DatabaseHelper.cs
+│   ├── Form1.cs
+│   ├── Form1.Designer.cs
+│   ├── Program.cs
+│   └── ...
+│
 ├── Dashboard.png
 ├── README.md
 └── ManufacturingTracker.sln
 ```
 
+---
+## 🗄️ Database Structure
+
+### Production Table
+
+| Column          | Data Type |
+| --------------- | --------- |
+| Id              | int       |
+| ProductName     | nvarchar  |
+| Quantity        | int       |
+| Defect          | int       |
+| DowntimeMinutes | int       |
+| CreatedAt       | datetime  |
+| UpdatedAt       | datetime  |
+
+---
+## 🏗️ System Architecture
+
+User
+   │
+   ▼
+WinForms UI
+   │
+   ▼
+DatabaseHelper (ADO.NET)
+   │
+   ▼
+SQL Server Database
 ---
 
 ## 🔮 Future Improvements
@@ -135,9 +144,20 @@ Manufacturing_Production_Tracker_Form
 * Monthly production reports
 * User authentication
 * PDF report export
-* Production trend analysis
+* Production trend charts by month
 ---
 
 ## 👨‍💻 Author
 
-Developed as a self-learning project to practice desktop application development, database integration, dashboard visualization, and reporting using C# and SQL Server.
+Developed by **Tay Shiek Chi** as a personal portfolio project to strengthen skills in C#, .NET, SQL Server, desktop application development, and data visualization.
+
+## 📚 Learning Outcomes
+
+This project helped me gain hands-on experience with:
+- Designing desktop applications using WinForms
+- Building CRUD operations with ADO.NET
+- Integrating SQL Server databases
+- Developing KPI dashboards
+- Creating charts using LiveCharts2
+- Exporting data to Excel with EPPlus
+- Organizing C# projects using a layered structure
